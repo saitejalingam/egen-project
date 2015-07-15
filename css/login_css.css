@@ -1,4 +1,26 @@
+a {
+    font-family: 'Montserrat', serif;
+}
+
 .back-arrow {
     float: left;
     margin-left: 1%;
+}
+
+.input-group{
+    margin-bottom: 1%;
+}
+
+.login-box {
+    background: rgba(0, 0, 0, .7);
+    padding: 2%;
+    border-radius: 0 10px 10px 10px;
+}
+
+.btn{
+    font-family: 'Montserrat', serif;
+}
+
+.btn:hover {
+    color: rgb(205, 44, 115);
 }

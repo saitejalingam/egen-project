@@ -16,6 +16,7 @@ h3 {
 p{
     color: whitesmoke;
     font-size: 75%;
+    margin-left: 1%;
 }
 
 .box {
@@ -34,10 +35,10 @@ p{
 
 @media (min-width: 720px) {
     h3 {
-        font-size: 1.55em;
+        font-size: 1.45em;
     }
 
     p{
-        font-size: 95%;
+        font-size: 90%;
     }
 }

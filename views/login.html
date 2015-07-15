@@ -13,12 +13,35 @@
 
 </head>
 <body>
-<div class="menu-bar">
-    <a class="btn btn-default btn-sm menu-icons back-arrow" title="Go back!" href="../index.html"><i class="fa fa-arrow-left fa-2x fa-fw"></i></a>
-    <a class="btn btn-default btn-sm menu-icons" title="Settings" href=""><i class="fa fa-cog fa-2x fa-fw active-btn"></i></a>
-    <a class="btn btn-default btn-sm menu-icons" title="Leave a Rating!" href="rating.html"><i class="fa fa-star fa-2x fa-fw"></i></a>
-    <a class="btn btn-default btn-sm menu-icons" title="Our Location" href="location.html"><i class="fa fa-location-arrow fa-2x fa-fw"></i></a>
-</div>
+    <div class="menu-bar">
+        <a class="btn btn-default btn-sm menu-icons back-arrow" title="Go back!" href="../index.html"><i class="fa fa-arrow-left fa-2x fa-fw"></i></a>
+        <a class="btn btn-default btn-sm menu-icons" title="Settings" href=""><i class="fa fa-cog fa-2x fa-fw active-btn"></i></a>
+        <a class="btn btn-default btn-sm menu-icons" title="Leave a Rating!" href="rating.html"><i class="fa fa-star fa-2x fa-fw"></i></a>
+        <a class="btn btn-default btn-sm menu-icons" title="Our Location" href="location.html"><i class="fa fa-location-arrow fa-2x fa-fw"></i></a>
+    </div>
 
+    <div class="container col-lg-5 col-md-5 col-sm-8 col-centered">
+        <ul class="nav nav-pills">
+            <li class="active"><a data-toggle="pill" href="settings.html">
+                <span class="icon"><i class="fa fa-sign-in fa-fw"></i></span> Owner Login</a>
+            </li>
+        </ul>
+
+        <div class="tab-content login-box">
+            <form>
+                <div class="input-group margin-bottom-sm">
+                    <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
+                    <input class="form-control" type="text" placeholder="User name">
+                </div>
+
+                <div class="input-group margin-bottom-sm">
+                    <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+                    <input class="form-control" type="password" placeholder="Password">
+                </div>
+
+                <button class="btn btn-default btn-m" type="submit" >Login</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>

@@ -10,25 +10,10 @@
     margin-bottom: 1%;
 }
 
-.nav-pills>li>a {
-    color: rgba(205, 44, 115, 0.95);
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
-
-.nav-pills>li>a:hover {
-    color: rgba(205, 44, 115, 0.95);
-    background-color: rgba(245, 245, 245, 0.95);
-}
-
-.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
-    color: whitesmoke;
-    background-color: rgba(205, 44, 115, 0.80);
-
+.btn{
+    font-family: 'Montserrat', serif;
 }
 
 .btn:hover {
-    background-color: whitesmoke;
-    color: rgba(205, 44, 115, 0.95);
+    color: rgb(205, 44, 115);
 }
-
