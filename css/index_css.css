@@ -1,0 +1,40 @@
+html, body {
+    font-size: 20px;
+    height: 100%;
+}
+
+body {
+    background: whitesmoke url("../images/finedining.jpg") no-repeat bottom center;
+    background-size: cover;
+    min-height: 100%;
+}
+
+.menu-bar {
+    background: rgba(0,0,0,.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    overflow: hidden;
+}
+
+.menu-icons {
+    font-size: 65%;
+    margin: 1%;
+    padding: 3%;
+    float: right;
+}
+
+.menu-icons:hover {
+    background-color: whitesmoke;
+    color: rgba(205, 44, 115, 0.95);
+}
+
+@media (min-width: 480px) {
+    .menu-icons {
+        font-size: 60%;
+        padding: 1% 2% 1% 2%;
+        margin: 0.7% 0.8% 1% 0;
+    }
+}
+
