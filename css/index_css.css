@@ -1,0 +1,41 @@
+.col-centered{
+    float: none;
+    margin: 0 auto;
+    margin-top: 7%;
+    margin-bottom: 5%;
+}
+
+.main-menu {
+    font-family: 'Montserrat', serif;
+    font-weight: 400;
+    background: rgba(0,0,0,.7);
+    padding: 0;
+    border-radius: 10px;
+}
+
+.input-group{
+    margin-bottom: 1%;
+}
+
+.nav-pills>li>a {
+    color: rgba(205, 44, 115, 0.95);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.nav-pills>li>a:hover {
+    color: rgba(205, 44, 115, 0.95);
+    background-color: rgba(245, 245, 245, 0.95);
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+    color: whitesmoke;
+    background-color: rgba(205, 44, 115, 0.80);
+
+}
+
+.btn:hover {
+    background-color: whitesmoke;
+    color: rgba(205, 44, 115, 0.95);
+}
+

@@ -11,16 +11,13 @@ body {
 
 .menu-bar {
     background: rgba(0,0,0,.6);
-    position: fixed;
-    top: 0;
-    left: 0;
     min-width: 100%;
     overflow: hidden;
     padding: 0 1% 0 0;
 }
 
 .menu-icons {
-    font-size: 65%;
+    font-size: 55%;
     margin: 1%;
     padding: 3%;
     float: right;
@@ -28,6 +25,10 @@ body {
 
 .menu-icons:hover{
     background-color: whitesmoke;
+    color: rgba(205, 44, 115, 0.95);
+}
+
+.active-btn{
     color: rgba(205, 44, 115, 0.95);
 }
 
