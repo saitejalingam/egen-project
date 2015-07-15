@@ -19,7 +19,7 @@ body {
 .menu-icons {
     font-size: 55%;
     margin: 1%;
-    padding: 3%;
+    padding: 2%;
     float: right;
 }
 
@@ -30,6 +30,13 @@ body {
 
 .active-btn{
     color: rgba(205, 44, 115, 0.95);
+}
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+    margin-top: 7%;
+    margin-bottom: 5%;
 }
 
 @media (min-width: 480px) {

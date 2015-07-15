@@ -3,3 +3,41 @@
     margin-left: 1%;
 }
 
+h3 {
+    font-family: 'Montserrat', serif;
+    color: rgba(205, 44, 115, 0.95);
+    font-size: 1.2em;
+    background-color: whitesmoke;
+    font-weight: 600;
+    padding: 1%;
+    border-radius: 10px;
+}
+
+p{
+    color: whitesmoke;
+    font-size: 75%;
+}
+
+.box {
+    background: rgba(0,0,0,.7);
+    border-radius: 10px;
+    padding: 2% 4% 2% 4%;
+}
+
+.field{
+    margin-bottom: 5%;
+}
+
+.col-margin {
+    margin: 5%;
+}
+
+@media (min-width: 720px) {
+    h3 {
+        font-size: 1.55em;
+    }
+
+    p{
+        font-size: 95%;
+    }
+}
