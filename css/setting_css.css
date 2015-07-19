@@ -87,3 +87,42 @@ td {
     color: whitesmoke;
 }
 
+.tab-title {
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    visibility: hidden;
+    display: none;
+}
+
+ul.nav-pills.nav-justified>li {
+    display: table-cell;
+    width: 1%;
+}
+
+@media (min-width: 768px) {
+    .tab-title{
+        display: inline;
+        visibility: visible;
+    }
+
+    ul.nav-pills.nav-justified>li {
+        float: none;
+    }
+}
+
+.profile-form>.form-control {
+    display: inline-block;
+    width: auto;
+}
+
+.profile-block {
+    font-size: 70%;
+    color: whitesmoke;
+    padding: 3%;
+}
+
+.profile-block>.btn {
+    float: right;
+    margin-bottom: 2%;
+    margin-left: 0.5%;
+}

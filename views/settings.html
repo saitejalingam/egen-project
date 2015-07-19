@@ -19,10 +19,10 @@
 
     <div class="container settings-menu col-centered">
         <ul class="nav nav-pills nav-justified">
-            <li class="active"><a data-toggle="pill" href="#reservations"><span class="icon"><i class="fa fa-book fa-fw"></i></span> Reservations</a></li>
-            <li><a data-toggle="pill" href="#seating"><span class="icon"><i class="fa fa-table fa-fw"></i></span> Seating</a></li>
-            <li><a data-toggle="pill" href="#profile"><span class="icon"><i class="fa fa-building fa-fw"></i></span> Profile</a></li>
-            <li><a data-toggle="pill" href="#settings"><span class="icon"><i class="fa fa-cogs fa-fw"></i></span> Settings</a></li>
+            <li class="active"><a data-toggle="pill" href="#reservations"><span class="icon"><i class="fa fa-fax fa-fw"></i></span><i class="tab-title"> Reservations</i></a></li>
+            <li><a data-toggle="pill" href="#seating"><span class="icon"><i class="fa fa-list-ul fa-fw"></i></span><i class="tab-title"> Seating</i></a></li>
+            <li><a data-toggle="pill" href="#profile"><span class="icon"><i class="fa fa-building fa-fw"></i></span><i class="tab-title"> Profile</i></a></li>
+            <li><a data-toggle="pill" href="#settings"><span class="icon"><i class="fa fa-cogs fa-fw"></i></span> <i class="tab-title"> Settings</i></a></li>
         </ul>
         <div class="tab-content">
 
@@ -90,6 +90,14 @@
                         <td><a href="#"> Details</a></td>
                         <td><a href="#"><i class="fa fa-pencil fa-fw"></i></a> </td>
                     </tr>
+                    <tr>
+                        <td>1500387</td>
+                        <td>Bahubali</td>
+                        <td>07/12/2015</td>
+                        <td>7</td>
+                        <td><a href="#"> Details</a></td>
+                        <td><a href="#"><i class="fa fa-pencil fa-fw"></i></a> </td>
+                    </tr>
                     </tbody>
                 </table>
 
@@ -99,12 +107,32 @@
             </div>
 
             <div id="profile" class="tab-pane fade col-sm-11 col-centered">
-                <p>hillo</p>
+                <form class="profile-form">
+                    <div class="profile-block col-sm-6"><label for="rest_name">Restaurant Name </label><input class="form-control" id="rest_name" type="text" placeholder="La Vostra Cena">
+                    <label for="owner_name">Contact Name </label><input type="text"  class="form-control" id="owner_name" placeholder="Sherlock Holmes">
+                    <label for="email">Email Address </label><input id="email" class="form-control" type="email" placeholder="sholmes@baker.com">
+                    <label for="phone">Phone </label><input id="phone" type="tel"  class="form-control" placeholder="(670)609-3808">
+                    </div>
+                    <div class="profile-block col-sm-6">
+                        <label for="address">Address </label><input type="text" id="address" class="form-control" placeholder="221B Baker Street, London, UK 02415"></input>
+                        <label for="open">Open during </label><select id="open"  class="form-control" name="workingdays">
+                        <option value="weekdays">Weekdays Only</option>
+                        <option value="weekends">Weekends Only</option>
+                        <option value="combine">Weekdays + Saturday</option>
+                        <option value="always">Everyday (except holidays)</option>
+                    </select>
 
+                    <label for="opentime">Open time </label><input  class="form-control" id="opentime" type="time" value="18:00:00">
+                    <label for="closetime">Close time </label><input  class="form-control" id="closetime" type="time" value="22:00:00">
+                    </div>
+                    <div class="profile-block">
+                        <button type="submit" class="btn btn-default btn-success">Update</button>
+                        <button type="reset" class="btn btn-default btn-danger">Reset</button>
+                    </div>
+                </form>
             </div>
 
             <div id="settings" class="tab-pane fade col-sm-11 col-centered">
-                <p>H;laga;lsello</p>
 
             </div>
         </div>
