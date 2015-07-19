@@ -4,9 +4,10 @@ html, body {
 }
 
 body {
-    background: whitesmoke url("../images/finedining.jpg") no-repeat bottom center;
+    background: whitesmoke url("../images/finedining.jpg") no-repeat top center;
     background-size: cover;
     min-height: 100%;
+    font-family: 'Montserrat', serif;
 }
 
 .menu-bar {
@@ -45,6 +46,13 @@ body {
         padding: 0.5% 1% 0.5% 1%;
         margin: 0.7% 0.8% 1% 0;
     }
+}
+
+.back-arrow {
+    float: left;
+    color: rgba(205, 44, 115, 0.95);
+    margin-left: 1%;
+    border-radius: 5px;
 }
 
 .nav-pills>li>a {

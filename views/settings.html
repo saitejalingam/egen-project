@@ -13,9 +13,104 @@
 
 </head>
 <body>
-<div class="menu-bar">
-    <a class="btn btn-default btn-sm menu-icons back-arrow" title="Go back!" href="../index.html"><i class="fa fa-arrow-left fa-2x fa-fw"></i></a>
-</div>
+    <div class="menu-bar">
+        <a class="menu-icons back-arrow" title="Go back!" href="../index.html"><i class="fa fa-home fa-2x fa-fw"></i></a>
+    </div>
 
+    <div class="container settings-menu col-centered">
+        <ul class="nav nav-pills nav-justified">
+            <li class="active"><a data-toggle="pill" href="#reservations"><span class="icon"><i class="fa fa-book fa-fw"></i></span> Reservations</a></li>
+            <li><a data-toggle="pill" href="#seating"><span class="icon"><i class="fa fa-table fa-fw"></i></span> Seating</a></li>
+            <li><a data-toggle="pill" href="#profile"><span class="icon"><i class="fa fa-building fa-fw"></i></span> Profile</a></li>
+            <li><a data-toggle="pill" href="#settings"><span class="icon"><i class="fa fa-cogs fa-fw"></i></span> Settings</a></li>
+        </ul>
+        <div class="tab-content">
+
+            <div id="reservations" class="tab-pane fade in active">
+                <div class="search-div"> <form onsubmit="">
+
+                    <div class="input-group margin-bottom-sm">
+                        <span class="input-group-addon btn btn-default dropdown-toggle" data-toggle="dropdown"><i class="caret"></i></span>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li><a href="#">Search using Reservation ID</a></li>
+                            <li><a href="#">Search using Name</a></li>
+                            <li><a href="#">Search using Date</a></li>
+                            <li><a href="#">Search using #Party</a></li>
+                        </ul>
+                        <input class="form-control" type="text" title="Search using Reservation ID" placeholder="Search using Reservation ID" required>
+                        <span class="input-group-addon btn search-btn"><i class="fa fa-search fa-fw"></i></span>
+                    </div>
+                </form>
+
+                <div>
+                    <ul class="pagination pagination-sm pull-right page-nav">
+                        <li class="active"><a href="#">1</a> </li>
+                        <li><a href="#">2</a> </li>
+                        <li><a href="#">3</a> </li>
+                        <li><a href="#">4</a> </li>
+                        <li><a href="#">></a> </li>
+                    </ul>
+                    </div>
+                </div>
+
+                <table class="table table-condensed">
+                    <thead>
+                    <tr><th>Rsv #</th> <th>Name</th> <th>Date</th> <th>#</th> <th colspan="2">Details</th></tr>
+                    </thead>
+                    <tbody><tr>
+                        <td>1500400</td>
+                        <td>Sai Teja Lingam</td>
+                        <td>07/19/2015</td>
+                        <td>5</td>
+                        <td><a href="#"> Details</a></td>
+                        <td><a href="#"><i class="fa fa-pencil fa-fw"></i></a> </td>
+                    </tr>
+                    <tr>
+                        <td>1500396</td>
+                        <td>Likhitha Lingam</td>
+                        <td>07/17/2015</td>
+                        <td>3</td>
+                        <td><a href="#"> Details</a></td>
+                        <td><a href="#"><i class="fa fa-pencil fa-fw"></i></a> </td>
+                    </tr>
+                    <tr>
+                        <td>1500390</td>
+                        <td>Sai Teja Lingam</td>
+                        <td>07/17/2015</td>
+                        <td>4</td>
+                        <td><a href="#"> Details</a></td>
+                        <td><a href="#"><i class="fa fa-pencil fa-fw"></i></a> </td>
+
+                    </tr>
+                    <tr>
+                        <td>1500388</td>
+                        <td>Shravya Lavu</td>
+                        <td>07/12/2015</td>
+                        <td>5</td>
+                        <td><a href="#"> Details</a></td>
+                        <td><a href="#"><i class="fa fa-pencil fa-fw"></i></a> </td>
+                    </tr>
+                    </tbody>
+                </table>
+
+            </div>
+            <div id="seating" class="tab-pane fade col-sm-11 col-centered">
+
+            </div>
+
+            <div id="profile" class="tab-pane fade col-sm-11 col-centered">
+                <p>hillo</p>
+
+            </div>
+
+            <div id="settings" class="tab-pane fade col-sm-11 col-centered">
+                <p>H;laga;lsello</p>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </body>
 </html>

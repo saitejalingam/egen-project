@@ -1,12 +1,7 @@
-.back-arrow {
-    float: left;
-    margin-left: 1%;
-}
-
 h3 {
     font-family: 'Montserrat', serif;
     color: rgba(205, 44, 115, 0.95);
-    font-size: 1.2em;
+    font-size: 1.0em;
     background-color: whitesmoke;
     font-weight: 600;
     padding: 1%;
@@ -15,7 +10,7 @@ h3 {
 
 p{
     color: whitesmoke;
-    font-size: 75%;
+    font-size: 65%;
     margin-left: 1%;
 }
 
@@ -33,12 +28,23 @@ p{
     margin: 5%;
 }
 
-@media (min-width: 720px) {
+#map-canvas {
+    display: none;
+}
+
+@media (min-width: 768px) {
     h3 {
-        font-size: 1.45em;
+        font-size: 1.25em;
     }
 
     p{
-        font-size: 90%;
+        font-size: 80%;
+    }
+
+    #map-canvas{
+        display: block;
+        margin-left: 0;
+        overflow: hidden;
+
     }
 }
