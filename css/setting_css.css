@@ -99,6 +99,33 @@ ul.nav-pills.nav-justified>li {
     width: 1%;
 }
 
+.profile-form>.form-control {
+    display: inline-block;
+    width: auto;
+}
+
+.profile-block {
+    font-size: 70%;
+    color: whitesmoke;
+    padding: 1%;
+}
+
+.profile-block>.btn {
+    float: right;
+    margin-bottom: 2%;
+    margin-left: 0.5%;
+}
+
+.form-control{
+    font-size: 80%;
+}
+
+.list-button {
+    margin: 1%;
+    margin-left: 3%;
+    width: 90%;
+}
+
 @media (min-width: 768px) {
     .tab-title{
         display: inline;
@@ -108,21 +135,8 @@ ul.nav-pills.nav-justified>li {
     ul.nav-pills.nav-justified>li {
         float: none;
     }
-}
-
-.profile-form>.form-control {
-    display: inline-block;
-    width: auto;
-}
-
-.profile-block {
-    font-size: 70%;
-    color: whitesmoke;
-    padding: 3%;
-}
-
-.profile-block>.btn {
-    float: right;
-    margin-bottom: 2%;
-    margin-left: 0.5%;
+    
+    .list-button{
+        width: 45%;
+    }
 }

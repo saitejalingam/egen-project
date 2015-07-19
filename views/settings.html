@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.0/css/bootstrap-toggle.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link href="../css/base_css.css" rel="stylesheet">
     <link href="../css/setting_css.css" rel="stylesheet">
@@ -102,6 +103,7 @@
                 </table>
 
             </div>
+
             <div id="seating" class="tab-pane fade col-sm-11 col-centered">
 
             </div>
@@ -133,12 +135,21 @@
             </div>
 
             <div id="settings" class="tab-pane fade col-sm-11 col-centered">
+                <div class="col-sm-8"><div><label class="profile-block">Add Reservation</label> <button class="btn search-btn"><i class="fa fa-plus fa-1x"></i></button></div>
+                <div><label class="profile-block" for="portal">Reservation Portal Active</label>
+                <input id="portal" type="checkbox" checked data-toggle="toggle" data-size="small"></div>
 
+                <div><label class="profile-block" for="autofill">Autofill</label>
+                <input id="autofill" type="checkbox" data-toggle="toggle" data-size="small"></div></div>
+
+                <button class="btn bt-default list-button search-btn">View Mailing List</button>
+                <button class="btn btn-default list-button search-btn">View Contact List</button>
             </div>
         </div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.0/js/bootstrap-toggle.min.js"></script>
 </body>
 </html>
