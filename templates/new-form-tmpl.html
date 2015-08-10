@@ -1,0 +1,29 @@
+    <form onsubmit="newVm.addReservation()">
+
+        <div class="input-group margin-bottom-sm">
+            <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
+            <input class="form-control" type="text" placeholder="Guest name" required title="Ex: John Smith">
+        </div>
+
+        <div class="input-group margin-bottom-sm">
+            <span class="input-group-addon"><i class="fa fa-clock-o fa-fw"></i></span>
+            <input class="form-control" type="date" required title="Date of Reservation">
+        </div>
+
+        <div class="input-group margin-bottom-sm">
+            <span class="input-group-addon"><i class="fa fa-group fa-fw"></i></span>
+            <input class="form-control" type="number" placeholder="#Guests" required title="Party Size">
+        </div>
+
+        <div class="input-group margin-bottom-sm">
+            <span class="input-group-addon"><i class="fa fa-phone fa-fw"></i></span>
+            <input class="form-control" type="tel" placeholder="Contact: (xxx)xxx-xxxx" required title="Contact Details">
+        </div>
+
+        <div class="input-group margin-bottom-sm">
+            <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
+            <input class="form-control" type="email" placeholder="Email address">
+        </div>
+
+        <button class="btn btn-default btn-m btn-rate" type="submit">Reserve</button>
+    </form>
