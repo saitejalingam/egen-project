@@ -13,9 +13,9 @@
     <link href="css/index_css.css" rel="stylesheet">
 
 </head>
-<body ng-controller="MainController as mainVm">
+<body ng-controller="MainController as mainVm" ng-cloak>
     <div class="menu-bar">
-        <a class="btn btn-default btn-sm  menu-icons" title="Settings" href="views/login.html"><i class="fa fa-cog fa-2x fa-fw"></i></a>
+        <a class="btn btn-default btn-sm  menu-icons" title="Settings" ng-click="mainVm.login()"><i class="fa fa-cog fa-2x fa-fw"></i></a>
     </div>
 
     <div class="container main-menu col-md-8 col-sm-10 col-centered">
@@ -35,10 +35,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
     <script src="scripts/ui-bootstrap-tpls-0.13.2.min.js"></script>
+    <script src="https://code.angularjs.org/1.4.3/angular-messages.js"></script>
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/main-controller.js"></script>
     <script src="scripts/controllers/change-controller.js"></script>
     <script src="scripts/controllers/new-controller.js"></script>
-
+    <script src="scripts/controllers/modal-controller.js"></script>
+    <script src="scripts/services/main-service.js"></script>
 </body>
 </html>

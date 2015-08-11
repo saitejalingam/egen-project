@@ -4,7 +4,7 @@
 (function(){
 
     angular
-        .module('onlineres', ['ui.router', 'ui.bootstrap'])
+        .module('onlineres', ['ui.router', 'ui.bootstrap', 'ngMessages'])
         .config(moduleConfig);
 
     moduleConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
@@ -17,12 +17,6 @@
                 url: "/new",
                 templateUrl: "templates/new-form-tmpl.html",
                 controller: "NewController as newVm"
-            })
-            .state('new.success', {
-                url: "/success",
-                templateUrl: "templates/success-msg-tmpl.html",
-                controller: "NewController",
-                controllerAs: "newVm"
             })
             .state('change', {
                 url: "/change",

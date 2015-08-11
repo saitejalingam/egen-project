@@ -10,6 +10,18 @@ body {
     font-family: 'Montserrat', serif;
 }
 
+h2 {
+    color: rgba(205, 44, 115, 0.95);
+}
+
+h3 {
+    color: rgba(205, 44, 115, 0.95);
+}
+
+h4 {
+    color: whitesmoke;
+}
+
 .menu-bar {
     background: rgba(0,0,0,.6);
     min-width: 100%;
