@@ -9,6 +9,7 @@ This repo contains the backend and frontend code for an online reservation manag
 
 ####Technologies Used
  Front End (SPA)
+ 
     * HTML/CSS/JavaScript
     * AngularJS Framework
     * Bootstrap CSS Framework
@@ -17,6 +18,7 @@ This repo contains the backend and frontend code for an online reservation manag
     * ngMessages Library
 
  Back End (REST API)
+ 
     * J2EE/Dynamic Web Project
     * Jersey + Jackson
     * MySQL Database (Community Edition)
