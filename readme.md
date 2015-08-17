@@ -9,21 +9,24 @@ This repo contains the backend and frontend code for an online reservation manag
 
 ####Technologies Used
 Front End (SPA)
-    1. HTML/CSS/JavaScript
-    2. AngularJS Framework
-    3. Bootstrap CSS Framework
-    4. UI Bootstrap Library
-    5. UI Router Library
-    6. ngMessages Library
+
+- HTML/CSS/JavaScript
+- AngularJS Framework
+- Bootstrap CSS Framework
+- UI Bootstrap Library
+- UI Router Library
+- ngMessages Library
 
 Back End (REST API)
-    1. J2EE/Dynamic Web Project
-    2. Jersey + Jackson
+
+- J2EE/Dynamic Web Project
+- Jersey + Jackson
 
 ####To-Do
-.fix animations
-.add pagination
-.implement autofill logic
-.unit testing using grunt
-.minification of javascript files
-.re-write the whole app from scratch in a more modular SPA model
+
+- .fix animations
+- .add pagination
+- .implement autofill logic
+- .unit testing using grunt
+- .minification of javascript files
+- .re-write the whole app from scratch in a more modular SPA model
