@@ -36,7 +36,11 @@ bower_components/
 build/
 dist/
 .idea/
-lab/
-presentation/
-videos/
-sketch/
+.settings/
+target/
+WebContent/.idea/
+WebContent/json/
+WebContent/META-INF
+WebContent/WEB-INF
+.classpath
+.project

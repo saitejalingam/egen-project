@@ -1,0 +1,29 @@
+    <div class="container col-sm-8 col-centered">
+
+        <h2><span class="icon"><i class="fa fa-sign-in fa-fw"></i></span> Owner Login</h2>
+
+        <div class="login-box">
+            <form name="loginform" ng-submit="modal.validate(loginform.$valid)" class="error">
+                <div class="input-group margin-bottom-sm">
+                    <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
+                    <input class="form-control" type="text" placeholder="User name" ng-model="modal.info.username" name="username" required>
+                </div>
+                <div ng-messages="loginform.username.$error" ng-if="loginform.username.$dirty">
+                    <p ng-message="required">Username is required!</p>
+                </div>
+
+                <div class="input-group margin-bottom-sm">
+                    <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+                    <input class="form-control" type="password" placeholder="Password" ng-model="modal.info.password" name="password" required>
+                </div>
+                <div ng-messages="loginform.password.$error" ng-if="loginform.password.$dirty">
+                    <p ng-message="required">Password is required!</p>
+                </div>
+                <div ng-if="modal.error">
+                    <p>Invalid Username or Password! Please try again!</p>
+                </div>
+
+                <button class="btn btn-default btn-m btn-login" ng-disabled="!loginform.$valid" type="submit" >Login</button>
+            </form>
+        </div>
+    </div>

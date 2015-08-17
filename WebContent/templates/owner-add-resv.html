@@ -1,0 +1,48 @@
+<div class="col-sm-11 container col-centered"><form ng-submit="modal.add(newResForm.$valid)" novalidate name="newResForm" class="error animate-if">
+
+    <div class="input-group margin-bottom-sm">
+        <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
+        <input class="form-control" type="text" placeholder="Guest name" ng-model="modal.newReservation.guest_name" required title="Ex: John Smith" name="name">
+    </div>
+    <div ng-messages="newResForm.name.$error" ng-if="newResForm.name.$dirty">
+        <p ng-message="required">Name is required!</p>
+    </div>
+
+    <div class="input-group margin-bottom-sm">
+        <span class="input-group-addon"><i class="fa fa-clock-o fa-fw"></i></span>
+        <input class="form-control" type="date" ng-model="modal.newReservation.date" required title="Date of Reservation" name="date">
+    </div>
+    <div ng-messages="newResForm.date.$error" ng-if="newResForm.date.$dirty">
+        <p ng-message="required">Date is required!</p>
+    </div>
+
+    <div class="input-group margin-bottom-sm">
+        <span class="input-group-addon"><i class="fa fa-group fa-fw"></i></span>
+        <input class="form-control" type="number" ng-model="modal.newReservation.guests" placeholder="#Guests" required title="Party Size" name="size">
+    </div>
+    <div ng-messages="newResForm.size.$error" ng-if="newResForm.size.$dirty">
+        <p ng-message="required">Number of Guests is required!</p>
+        <p ng-message="number">Number of Guests must be a Number!</p>
+    </div>
+
+    <div class="input-group margin-bottom-sm">
+        <span class="input-group-addon"><i class="fa fa-phone fa-fw"></i></span>
+        <input class="form-control" type="tel" placeholder="Contact: (xxx)xxx-xxxx" ng-model="modal.newReservation.contact" required title="Contact Details" name="contact" ng-pattern="/^[0-9]{10}$/">
+    </div>
+    <div ng-messages="newResForm.contact.$error" ng-if="newResForm.contact.$dirty">
+        <p ng-message="required">Contact Number is required!</p>
+        <p ng-message="pattern">Contact Number must be 10 digits!</p>
+    </div>
+
+    <div class="input-group margin-bottom-sm">
+        <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
+        <input class="form-control" type="email" ng-model="modal.newReservation.email" placeholder="Email address" name="email" required>
+    </div>
+    <div ng-messages="newResForm.email.$error" ng-if="newResForm.email.$dirty">
+        <p ng-message="required">Email is required!</p>
+        <p ng-message="email">Email must be valid!</p>
+    </div>
+
+    <button class="btn btn-default btn-m btn-rate" ng-disabled="!newResForm.$valid" type="submit">{{modal.msg}}</button>
+</form>
+</div>

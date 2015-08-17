@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="settings">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Reservation Portal</title>
+    <meta name="Description" content="Welcome to the online reservation portal!">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href="../css/base_css.css" rel="stylesheet">
+    <link href="../css/setting_css.css" rel="stylesheet">
+
+</head>
+<body ng-controller="OwnerController as ownVm">
+    <div class="menu-bar">
+        <a class="menu-icons back-arrow" title="Go back!" href="../index.html"><i class="fa fa-home fa-2x fa-fw"></i></a>
+    </div>
+
+    <div class="container settings-menu col-centered">
+        <ul class="nav nav-pills nav-justified">
+            <li ng-class="{active: ownVm.isActive(1)}"><a ui-sref="reservations" ng-click="ownVm.setActive(1)"><span class="icon"><i class="fa fa-fax fa-fw"></i></span><i class="tab-title"> Reservations</i></a></li>
+            <li ng-class="{active: ownVm.isActive(2)}"><a ui-sref="settings" ng-click="ownVm.setActive(2)"><span class="icon"><i class="fa fa-cog fa-fw"></i></span><i class="tab-title"> Settings</i></a></li>
+        </ul>
+        <div class="tab-content col-sm-11 col-centered" ui-view>
+
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+    <script src="../scripts/ui-bootstrap-tpls-0.13.2.min.js"></script>
+    <script src="https://code.angularjs.org/1.4.3/angular-messages.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="../scripts/settings-app.js"></script>
+    <script src="../scripts/controllers/owner-module/owner-controller.js"></script>
+    <script src="../scripts/controllers/owner-module/reservations-controller.js"></script>
+    <script src="../scripts/controllers/owner-module/modal-new-controller.js"></script>
+    <script src="../scripts/controllers/owner-module/modal-edit-controller.js"></script>
+    <script src="../scripts/controllers/owner-module/settings-controller.js"></script>
+    <script src="../scripts/services/resv-service.js"></script>
+    <script src="../scripts/services/modal-service.js"></script>
+    <script src="../scripts/services/settings-service.js"></script>
+</body>
+</html>

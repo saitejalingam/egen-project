@@ -1,0 +1,150 @@
+<div>
+    <accordion close-others="true">
+        <accordion-group is-open="pro_status.open">
+            <accordion-heading>
+                Restaurant Profile <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': pro_status.open, 'glyphicon-chevron-right': !pro_status.open}"></i>
+            </accordion-heading>
+            <alert class="acc-font" ng-if="setVm.alerts[0].visible" type="{{setVm.alerts[0].type}}" close="setVm.hideAlert(0)">{{setVm.alerts[0].msg}}</alert>
+            <form class="profile-form error" name="profile-form" ng-submit="setVm.updateProfile()">
+                <div class="row">
+                    <div class="profile-block col-xs-12 col-sm-6">
+
+                        <label for="rest_name">Restaurant Name </label>
+                        <input class="form-control" id="rest_name" type="text" name="rest_name" ng-model="setVm.info.rest_name" required>
+
+                        <label for="owner_name">Contact Name </label>
+                        <input type="text" class="form-control" id="owner_name" name="owner_name" ng-model="setVm.info.owner_name" required>
+
+                        <label for="email">Email Address </label>
+                        <input id="email" class="form-control" type="email" name="email" ng-model="setVm.info.email" required>
+
+                        <label for="phone">Phone </label>
+                        <input id="phone" type="tel" class="form-control" name="contact" ng-model="setVm.info.contact" required ng-pattern="/^[0-9]{10}$/">
+
+                    </div>
+
+                    <div class="profile-block col-xs-12 col-sm-6">
+                        <label for="address">Address </label>
+                        <input type="text" id="address" class="form-control" name="address" ng-model="setVm.info.address" required>
+
+                        <label for="open">Open during </label>
+                        <select id="open" class="form-control" name="open_during" ng-model="setVm.info.open_during" required>
+                            <option ng-selected="setVm.info.open_during === 1" value="1">Weekdays Only</option>
+                            <option ng-selected="setVm.info.open_during === 2" value="2">Weekends Only</option>
+                            <option ng-selected="setVm.info.open_during === 3" value="3">Weekdays + Saturday</option>
+                            <option ng-selected="setVm.info.open_during === 4" value="4">Everyday (except holidays)</option>
+                        </select>
+
+                        <label for="opentime">Open time </label>
+                        <input class="form-control" id="opentime" type="time" name="open_time" ng-model="setVm.info.open_time" required>
+
+                        <label for="closetime">Close time </label>
+                        <input class="form-control" id="closetime" type="time" name="close_time" ng-model="setVm.info.close_time" required>
+
+                    </div>
+                </div>
+
+                <div class="buttons-div">
+                    <button type="submit" class="btn btn-default btn-success">Update</button>
+                </div>
+            </form>
+        </accordion-group>
+
+        <accordion-group  is-open="app_status.open">
+            <accordion-heading>
+                App Settings <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': app_status.open, 'glyphicon-chevron-right': !app_status.open}"></i>
+            </accordion-heading>
+
+            <div class="col-sm-6">
+                <alert class="acc-font"  ng-if="setVm.alerts[1].visible" type="{{setVm.alerts[1].type}}" close="setVm.hideAlert(1)">{{setVm.alerts[1].msg}}</alert>
+
+                <form name="appSetForm" ng-submit="setVm.updateSettings(setVm.app_set.capacity < setVm.app_set.overbook)">
+                <div class="input-group">
+                    <span class="input-group-addon" title="Number of Guests that can be accomodated!">Restaurant Capacity </span>
+                    <input type="number" class="form-control" ng-model="setVm.app_set.capacity">
+                </div>
+
+                <div class="input-group">
+                    <span class="input-group-addon" title="Number above Capacity until which Reservations are allowed">Overbook Capacity </span>
+                    <input type="number" class="form-control" ng-model="setVm.app_set.overbook" required>
+                </div>
+
+                <div class="input-group">
+                    <span class="input-group-addon" title="Allow Automatic allocation of Reservations">Autofill </span>
+                    <input type="checkbox" class="form-control" ng-model="setVm.app_set.autofill">
+                </div>
+                <button class="btn btn-default btn-success" type="submit" ng-disabled="!appSetForm.$valid">Update</button>
+            </form>
+            </div>
+
+            <div class="col-sm-6 acc-font">
+            <accordion close-others="true">
+                    <accordion-group is-open="usnme.open">
+                        <accordion-heading>
+                            Change Username <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': usnme.open, 'glyphicon-chevron-right': !usnme.open}"></i>
+                        </accordion-heading>
+                        <alert class="acc-font" ng-if="setVm.alerts[2].visible" type="{{setVm.alerts[2].type}}" close="setVm.hideAlert(2)">{{setVm.alerts[2].msg}}</alert>
+
+                        <form name="useForm" ng-submit="setVm.changeUsername(setVm.newUse.new === setVm.newUse.conf)">
+                            <input class="input-group form-control" type="text" placeholder="Old Username" ng-model="setVm.newUse.old1" required/>
+                            <input class="input-group form-control" type="text" placeholder="New Username" ng-model="setVm.newUse.new1" required/>
+                            <input class="input-group form-control" type="text" placeholder="Confirm New Username" ng-model="setVm.newUse.cnf1" required/>
+                            <button class="btn btn-default download-btn" type="submit" ng-disabled="!useForm.$valid">Save</button>
+                        </form>
+
+                    </accordion-group>
+
+                    <accordion-group is-open="pswd.open">
+                            <accordion-heading>
+                                Change Password <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': pswd.open, 'glyphicon-chevron-right': !pswd.open}"></i>
+                            </accordion-heading>
+
+                        <alert class="acc-font" ng-if="setVm.alerts[3].visible" type="{{setVm.alerts[3].type}}" close="setVm.hideAlert(3)">{{setVm.alerts[3].msg}}</alert>
+
+                            <form name="passForm" ng-submit="setVm.changePassword(setVm.newPass.new === setVm.newPass.conf)">
+                                <input class="input-group form-control" type="password" placeholder="Old Password" ng-model="setVm.newPass.old1" required/>
+                                <input class="input-group form-control" type="password" placeholder="New Password" ng-model="setVm.newPass.new1" required/>
+                                <input class="input-group form-control" type="password" placeholder="Confirm New Password" ng-model="setVm.newPass.cnf1" required/>
+                                <button class="btn btn-default download-btn" type="submit" ng-disabled="!passForm.$valid">Save</button>
+
+                            </form>
+
+                    </accordion-group>
+                </accordion>
+            </div>
+        </accordion-group>
+
+        <accordion-group is-open="cus_status.open">
+            <accordion-heading>
+                Customer Info <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': cus_status.open, 'glyphicon-chevron-right': !cus_status.open}"></i>
+            </accordion-heading>
+            <button class="btn btn-default list-button" ng-click="setVm.toggleMail = !setVm.toggleMail; setVm.toggleContact = false; setVm.getMailing()">View Mailing List</button>
+            <button class="btn btn-default list-button" ng-click="setVm.toggleContact = !setVm.toggleContact; setVm.toggleMail = false; setVm.getContact()">View Contact List</button>
+            <hr>
+            <div collapse="!setVm.toggleMail" class="well well-sm lists">
+                <button class="download-btn">Download .xls</button>
+                <table class="table">
+                    <tbody>
+                    <tr ng-repeat="p in setVm.mailingList">
+                        <td>{{p.name}}</td>
+                        <td>{{p.contact}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div collapse="!setVm.toggleContact" class="well well-sm lists">
+                <button class="download-btn">Download .xls</button>
+                <table class="table">
+                    <tbody>
+                    <tr ng-repeat="p in setVm.contactList">
+                        <td>{{p.name}}</td>
+                        <td>{{p.contact}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </accordion-group>
+    </accordion>
+</div>
+
+

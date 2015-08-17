@@ -1,0 +1,43 @@
+DESC project_db.owner_id;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| username | varchar(45) | NO   | PRI | NULL    |       |
+| password | varchar(45) | NO   |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+
+DESC project_db.profile_db
++-------------+-------------+------+-----+---------+-------+
+| Field       | Type        | Null | Key | Default | Extra |
++-------------+-------------+------+-----+---------+-------+
+| rest_name   | varchar(45) | NO   | PRI | NULL    |       |
+| owner_name  | varchar(45) | YES  |     | NULL    |       |
+| email       | varchar(45) | YES  |     | NULL    |       |
+| contact     | varchar(45) | YES  |     | NULL    |       |
+| address     | varchar(45) | YES  |     | NULL    |       |
+| open_during | int(1)      | YES  |     | NULL    |       |
+| open_time   | varchar(45) | YES  |     | NULL    |       |
+| close_time  | varchar(45) | YES  |     | NULL    |       |
++-------------+-------------+------+-----+---------+-------+
+
+
+DESC project_db.settings_db
++----------+---------+------+-----+---------+-------+
+| Field    | Type    | Null | Key | Default | Extra |
++----------+---------+------+-----+---------+-------+
+| capacity | int(11) | NO   | PRI | NULL    |       |
+| overbook | int(11) | YES  |     | NULL    |       |
+| autofill | int(11) | YES  |     | NULL    |       |
++----------+---------+------+-----+---------+-------+
+
+DESC project_db.reservations_db;
++----------------+-------------+------+-----+---------+-------+
+| Field          | Type        | Null | Key | Default | Extra |
++----------------+-------------+------+-----+---------+-------+
+| reservation_id | int(11)     | NO   | PRI | NULL    |       |
+| guest_name     | varchar(45) | YES  |     | NULL    |       |
+| date           | varchar(45) | YES  |     | NULL    |       |
+| guests         | int(11)     | YES  |     | NULL    |       |
+| contact        | varchar(45) | YES  |     | NULL    |       |
+| email          | varchar(75) | YES  |     | NULL    |       |
++----------------+-------------+------+-----+---------+-------+

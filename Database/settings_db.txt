@@ -1,0 +1,7 @@
+/*
+-- Query: SELECT * FROM settings_db
+LIMIT 0, 1000
+
+-- Date: 2015-08-16 22:25
+*/
+INSERT INTO `settings_db` (`capacity`,`overbook`,`autofill`) VALUES (40,50,1);

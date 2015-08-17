@@ -1,0 +1,70 @@
+<form ng-if="!changeVm.editFlag && !changeVm.editedFlag" ng-submit="changeVm.editReservation(IDResForm.$valid)" novalidate name="IDResForm" class="error animate-if">
+
+    <div class="input-group margin-bottom-sm">
+        <span class="input-group-addon"><i class="fa fa-cutlery fa-fw"></i></span>
+        <input class="form-control" type="number" title="Your reservation ID" placeholder="Enter 10 digit Reservation ID" required name="resvID" ng-model="changeVm.editReserve.reservation_id" ng-pattern="/^[0-9]{10}$/">
+    </div>
+    <div ng-if="changeVm.error">
+        <p>The reservation ID you've entered is invalid or expired!</p>
+    </div>
+
+    <button class="btn btn-default btn-m"  ng-disabled="!IDResForm.$valid" type="submit">Change Reservation</button>
+</form>
+
+<div ng-if="changeVm.editFlag" class="animate-if">
+
+    <form name="editResForm" ng-submit="changeVm.saveEdit(editResForm.$valid)">
+
+        <div class="input-group margin-bottom-sm">
+            <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
+            <input class="form-control" type="text" ng-model="changeVm.editReserve.guest_name" name="name" required title="Ex: John Smith">
+        </div>
+        <div ng-messages="editResForm.name.$error" ng-if="editResForm.name.$dirty" class="error">
+            <p ng-message="required">Name is required!</p>
+        </div>
+
+        <div class="input-group margin-bottom-sm">
+            <span class="input-group-addon"><i class="fa fa-clock-o fa-fw"></i></span>
+            <input class="form-control" type="date" ng-model="changeVm.editReserve.date" name="date" required title="Date of Reservation">
+        </div>
+        <div ng-messages="editResForm.date.$error" ng-if="editResForm.date.$dirty" class="error">
+            <p ng-message="required">Date is required!</p>
+        </div>
+
+        <div class="input-group margin-bottom-sm">
+            <span class="input-group-addon"><i class="fa fa-group fa-fw"></i></span>
+            <input class="form-control" type="number" ng-model="changeVm.editReserve.guests" name="size" required title="Party Size">
+        </div>
+        <div ng-messages="editResForm.size.$error" ng-if="editResForm.size.$dirty" class="error">
+            <p ng-message="required">Number of Guests is required!</p>
+            <p ng-message="number">Number of Guests must be a Number!</p>
+        </div>
+
+        <div class="input-group margin-bottom-sm">
+            <span class="input-group-addon"><i class="fa fa-phone fa-fw"></i></span>
+            <input class="form-control" type="tel" ng-model="changeVm.editReserve.contact" name="contact" required title="Contact Details">
+        </div>
+        <div ng-messages="editResForm.contact.$error" ng-if="editResForm.contact.$dirty" class="error">
+            <p ng-message="required">Contact Number is required!</p>
+            <p ng-message="pattern">Contact Number must be 10 digits!</p>
+        </div>
+
+        <div class="input-group margin-bottom-sm">
+            <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
+            <input class="form-control" type="email" name="email" ng-model="changeVm.editReserve.email" required>
+        </div>
+        <div ng-messages="editResForm.email.$error" ng-if="editResForm.email.$dirty" class="error">
+            <p ng-message="required">Email is required!</p>
+            <p ng-message="email">Email must be valid!</p>
+        </div>
+
+        <button class="btn btn-default btn-m btn-rate" ng-disabled="!editResForm.$valid" type="submit">Save Changes</button>
+    </form>
+
+</div>
+
+<div ng-if="changeVm.editedFlag" class="animate-if">
+
+    <h3>Changes have been Succesfully saved!</h3>
+    <h4>See you soon!</h4>
+</div>

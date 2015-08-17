@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="onlineres">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Reservation Portal</title>
+    <meta name="Description" content="Welcome to the online reservation portal!">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href="css/base_css.css" rel="stylesheet">
+    <link href="css/index_css.css" rel="stylesheet">
+
+</head>
+<body ng-controller="MainController as mainVm" ng-cloak>
+    <div class="menu-bar">
+        <a class="btn btn-default btn-sm  menu-icons" title="Settings" ng-click="mainVm.login()"><i class="fa fa-cog fa-2x fa-fw"></i></a>
+    </div>
+
+    <div class="container main-menu col-md-8 col-sm-10 col-centered">
+        <ul class="nav nav-pills nav-justified">
+            <li ng-class="{active: mainVm.isActive(1)}"><a ui-sref="new" ng-click="mainVm.setActive(1)"><span class="icon"><i class="fa fa-cutlery fa-fw"></i></span> New Reservation</a></li>
+            <li ng-class="{active: mainVm.isActive(2)}"><a ui-sref="change" ng-click="mainVm.setActive(2)"><span class="icon"><i class="fa fa-pencil fa-fw"></i></span> Change Reservation</a></li>
+        </ul>
+        <div class="tab-content col-md-9 col-centered">
+            <div ui-view>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+    <script src="scripts/ui-bootstrap-tpls-0.13.2.min.js"></script>
+    <script src="https://code.angularjs.org/1.4.3/angular-messages.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/customer-module/main-controller.js"></script>
+    <script src="scripts/controllers/customer-module/change-controller.js"></script>
+    <script src="scripts/controllers/customer-module/new-controller.js"></script>
+    <script src="scripts/controllers/customer-module/login-modal-controller.js"></script>
+    <script src="scripts/services/main-service.js"></script>
+    <script src="scripts/services/login-service.js"></script>
+</body>
+</html>

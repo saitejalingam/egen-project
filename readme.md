@@ -19,7 +19,6 @@ Front End (SPA)
 Back End (REST API)
     1. J2EE/Dynamic Web Project
     2. Jersey + Jackson
-    3. MySQL Database (Community Edition)
 
 ####To-Do
 .fix animations

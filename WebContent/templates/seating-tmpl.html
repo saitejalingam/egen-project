@@ -1,0 +1,22 @@
+<div class="col-sm-6">
+
+    <p style="color: rgb(205, 44, 115);">Today's Listing</p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Table No.</th>
+                <th>Customer Name</th>
+                <th>Party Size</th>
+                <th>Confirm</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="p in seatVm.result">
+                <td>{{A}}</td>
+                <td>{{p.guest_name}}</td>
+                <td>{{p.guests}}</td>
+                <td><input type="checkbox" ng-model="p.confirm"/></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,7 @@
+/*
+-- Query: SELECT * FROM owner_id
+LIMIT 0, 1000
+
+-- Date: 2015-08-16 22:23
+*/
+INSERT INTO `owner_id` (`username`,`password`) VALUES ('username','password');

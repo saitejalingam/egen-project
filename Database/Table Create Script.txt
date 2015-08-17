@@ -1,0 +1,45 @@
+*| owner_id | *
+
+CREATE TABLE `owner_id` (
+  `username` varchar(45) NOT NULL,
+  `password` varchar(45) NOT NULL,
+  PRIMARY KEY (`username`)
+)
+
+
+*| profile_db |*
+
+CREATE TABLE `profile_db` (
+  `rest_name` varchar(45) NOT NULL,
+  `owner_name` varchar(45) DEFAULT NULL,
+  `email` varchar(45) DEFAULT NULL,
+  `contact` varchar(45) DEFAULT NULL,
+  `address` varchar(45) DEFAULT NULL,
+  `open_during` int(1) DEFAULT NULL,
+  `open_time` varchar(45) DEFAULT NULL,
+  `close_time` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`rest_name`)
+) 
+
+
+*| settings_db |*
+
+CREATE TABLE `settings_db` (
+  `capacity` int(11) NOT NULL,
+  `overbook` int(11) DEFAULT NULL,
+  `autofill` int(11) DEFAULT NULL,
+  PRIMARY KEY (`capacity`)
+) 
+
+
+*| reservations_db |*
+
+CREATE TABLE `reservations_db` (
+  `reservation_id` int(11) NOT NULL,
+  `guest_name` varchar(45) DEFAULT NULL,
+  `date` varchar(45) DEFAULT NULL,
+  `guests` int(11) DEFAULT NULL,
+  `contact` varchar(45) DEFAULT NULL,
+  `email` varchar(75) DEFAULT NULL,
+  PRIMARY KEY (`reservation_id`)
+)

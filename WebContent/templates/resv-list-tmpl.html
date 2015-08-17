@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="col-sm-10"><input type="search" class="form-control" ng-model="resvVm.searchText" placeholder="Search here!"></div>
+    <div class="col-sm-2"><a class="add " ng-click="resvVm.addReservation()"><i class="fa fa-plus fa-1x"></i>  Add Reservation</a></div>
+</div>
+
+<table class="table tableResv">
+    <thead>
+    <tr ng-init="resvVm.sorter='reservation_id'; resvVm.reverse = false;">
+        <th ng-click="resvVm.sorter='reservation_id'; resvVm.reverse = !resvVm.reverse;">Rsv #</th>
+        <th ng-click="resvVm.sorter='reservation_id'; resvVm.reverse = !resvVm.reverse;">Name</th>
+        <th ng-click="resvVm.sorter='reservation_id'; resvVm.reverse = !resvVm.reverse;">Date</th>
+        <th ng-click="resvVm.sorter='reservation_id'; resvVm.reverse = !resvVm.reverse;">#</th>
+        <th ng-click="resvVm.sorter='reservation_id'; resvVm.reverse = !resvVm.reverse;" colspan="2">Details</th>
+    </thead>
+    <tbody>
+        <tr ng-repeat="resv in resvVm.list | filter:resvVm.searchText | orderBy:resvVm.sorter:resvVm.reverse">
+            <td>{{resv.reservation_id}}</td>
+            <td>{{resv.guest_name}}</td>
+            <td>{{resv.date}}</td>
+            <td>{{resv.guests}}</td>
+            <td><a> Details</a></td>
+            <td><a ng-click="resvVm.editReservation(resv.reservation_id)"><i class="fa fa-pencil fa-fw edit_icon"></i></a></td>
+        </tr>
+    </tbody>
+</table>
+

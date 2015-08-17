@@ -1,0 +1,7 @@
+/*
+-- Query: SELECT * FROM profile_db
+LIMIT 0, 1000
+
+-- Date: 2015-08-16 22:34
+*/
+INSERT INTO `profile_db` (`rest_name`,`owner_name`,`email`,`contact`,`address`,`open_during`,`open_time`,`close_time`) VALUES ('La Vostra Cena','Veera Sai Teja Lingam','saitejalingam@gmail.com','4124124124','221B Baker Street, London, UK 03234',1,'1969-12-31T23:00:00.000Z','1970-01-01T04:45:00.000Z');
